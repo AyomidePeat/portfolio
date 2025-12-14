@@ -112,6 +112,16 @@ const TechnicalSkillsTabs = ({ technicalSkills }: { technicalSkills: SkillCatego
 export default function ExperienceDetailPage({ experience }: ExperienceDetailPageProps) {
   return (
     <div className="w-full overflow-y-auto scroll-smooth">
+      {/* STICKY BACK BUTTON FOR MOBILE */}
+      <div className="md:hidden fixed top-4 left-4 z-50">
+        <Link
+          href="/#experience"
+          className="inline-flex items-center bg-black/80 backdrop-blur-sm text-white hover:bg-black transition-all px-4 py-2 rounded-full shadow-lg"
+        >
+          <ChevronLeft className="w-5 h-5 mr-1" /> Back
+        </Link>
+      </div>
+
       {/* HEADER SECTION */}
       <header
         className="relative w-full py-20 md:py-28 bg-cover bg-center text-center"
@@ -122,7 +132,7 @@ export default function ExperienceDetailPage({ experience }: ExperienceDetailPag
         <div className="relative z-10 container mx-auto max-w-5xl px-6">
           <Link
             href="/#experience"
-            className="inline-flex items-center text-white/80 hover:text-white transition-colors mb-8"
+            className="hidden md:inline-flex items-center text-white/80 hover:text-white transition-colors mb-8"
           >
             <ChevronLeft className="w-6 h-6 mr-2" /> Back to Experience
           </Link>

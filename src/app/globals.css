@@ -171,7 +171,8 @@
   }
   .animate-underline-hover::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+    @apply absolute left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+    bottom: -3px;
   }
   .animate-underline-hover:hover::after {
     @apply w-full;
